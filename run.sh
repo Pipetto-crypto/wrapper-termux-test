@@ -14,7 +14,7 @@ exec 1>log.txt 2>&1
 pkg update -y || fail "Couldn't update termux packages"
 pkg upgrade -y || fail "Couldn't upgrade termux packages"
 pkg install x11-repo tur-repo -y || fail "Couldn't install required termux repos"
-pkg install hangover-wine vulkan-validation-layers termux-x11-nightly vulkan-tools -y || fail "Couldn't install required termux packages"
+pkg install ldd hangover-wine vulkan-validation-layers termux-x11-nightly vulkan-tools -y || fail "Couldn't install required termux packages"
 
 kill $(pidof app_process)
 export TERMUX_X11_DEBUG=1
